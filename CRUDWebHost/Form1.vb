@@ -35,14 +35,16 @@ Public Class Form1
         dataStream.Close()
         response.Close()
         MsgBox(responseFromServer)
-    End Sub
-
-    Private Sub btnRefresh_Click(sender As Object, e As EventArgs) Handles btnRefresh.Click
-        GunaDataGridView1.Rows.Clear()
         getRequest()
     End Sub
 
+    Private Sub btnRefresh_Click(sender As Object, e As EventArgs) Handles btnRefresh.Click
+        getRequest()
+        txtTitle.Text = ""
+    End Sub
+
     Public Sub getRequest()
+        GunaDataGridView1.Rows.Clear()
         Dim webclient As WebClient = New WebClient
         Try
             jsonStr = webclient.DownloadString("https://foodappandroid.000webhostapp.com/posts.php")
@@ -59,5 +61,9 @@ Public Class Form1
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
+    End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        getRequest()
     End Sub
 End Class
