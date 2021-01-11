@@ -5,6 +5,14 @@ VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CRUDWebHost", "CRUDWebHost\CRUDWebHost.vbproj", "{E1920546-21D5-4487-86E6-D80284139D15}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HostFiles", "HostFiles", "{0D2CC4F0-6018-4A07-8315-9F4348E34D5F}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Downloads\addtitle.php = ..\..\..\Downloads\addtitle.php
+		..\..\..\Downloads\posts.php = ..\..\..\Downloads\posts.php
+		..\..\..\Downloads\posts.sql = ..\..\..\Downloads\posts.sql
+		..\..\..\Downloads\Vb.Net Json Parsing.pdf = ..\..\..\Downloads\Vb.Net Json Parsing.pdf
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
