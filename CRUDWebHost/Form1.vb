@@ -17,7 +17,7 @@ Public Class Form1
     Private Sub postRequest()
         Dim title = txtTitle.Text
         Dim PostData = "title=" & title
-        Dim request As WebRequest = WebRequest.Create("https://foodappandroid.000webhostapp.com/addtitle.php")
+        Dim request As WebRequest = WebRequest.Create("https://foodappandroid.000webhostapp.com/Other/addtitle.php")
 
         request.Method = "POST"
         Dim byteArray As Byte() = Encoding.UTF8.GetBytes(PostData)
@@ -47,7 +47,7 @@ Public Class Form1
         GunaDataGridView1.Rows.Clear()
         Dim webclient As WebClient = New WebClient
         Try
-            jsonStr = webclient.DownloadString("https://foodappandroid.000webhostapp.com/posts.php")
+            jsonStr = webclient.DownloadString("https://foodappandroid.000webhostapp.com/Other/posts.php")
         Catch ex As Exception
             MsgBox(ex.Message, vbCritical)
         End Try
